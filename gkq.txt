@@ -1,0 +1,10 @@
+What color are bananas when they’re ripe?,Red,Yellow,Green,Purple,2
+Which planet is known as the “Red Planet”?,Mars,Jupiter,Saturn,Venus,1
+How many legs does a spider have?,6,8,10,12,2
+What is the capital of France?,Rome,Madrid,Paris,London,3
+Which animal is known as the “King of the Jungle”?,Elephant,Tiger,Lion,Bear,3
+What do bees produce?,Sugar,Honey,Butter,Milk,2
+How many days are in a leap year?,365,364,366,367,3
+What is 5 + 7?,10,11,12,13,3
+What shape is a stop sign?,Hexagon,Octagon,Pentagon,Square,2
+What is the opposite of “hot”?,Warm,Cold,Cool,Freeze,2
