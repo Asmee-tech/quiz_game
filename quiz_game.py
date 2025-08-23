@@ -12,7 +12,7 @@ sbox=Rect(860,290,300,420)
 ol=[obox1,obox2,obox3,obox4]
 tns=10
 score=0
-file="gkq.txt"
+file1="gkq.txt"
 gameo=False
 questions=[]
 indexn=0
@@ -47,9 +47,20 @@ def time():
     global tns
     if tns>0:
         tns-=1
+    else:
+        go()
+def ca():
+    global tns, question, score, questions
+    score+=1
+    if questions:
+        question=rn()
+        tns=10
+    else:
+        go()
+        
 def read():
     global qc,indexn,questions
-    rf=open(file,"r")
+    rf=open(file1,"r")
     for question in rf:
         questions.append(question)
         qc+=1
@@ -63,7 +74,25 @@ def on_mouse_down(pos):
     for i in ol:
         if i.collidepoint(pos):
             if ind==int(question[5]):
-                
+                ca()
+            else:
+                go()        
+        ind+=1      
+    if sbox.collidepoint(pos):
+        skip()
+def go():
+    global question, tns, gameo
+    gameo=True
+    tns=0
+    msg=f"Game over,your score is {score}"
+    question=[msg,"-","-","-","-",5]
+def skip():
+    global question, tns, questions
+    if questions and not gameo:
+        question=rn()
+        tns=10
+    else:
+        go()
 read()
 question=rn()
 clock.schedule_interval(time,1)  
